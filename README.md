@@ -64,18 +64,26 @@ If the ZIP file was split into multiple parts, you will need to combine them bef
      1. Open Command Prompt (cmd).
      2. Navigate to the directory where the parts are located using the `cd` command.
      3. Use the following command to combine the parts:
+
+
         ```cmd
         copy /b cookies_stealer_240918-1937.zip.part1 + cookies_stealer_240918-1937.zip.part2 cookies_stealer_240918-1937.zip
         ```
-        The `copy /b` command concatenates binary files (`/b` switch) into a single file. This method combines the parts into `cookies_stealer_240918-1937.zip`.
+
+
+         The `copy /b` command concatenates binary files (`/b` switch) into a single file. This method combines the parts into `cookies_stealer_240918-1937.zip`.
 
    - **Method 2: Using PowerShell**:
      1. Open PowerShell.
      2. Navigate to the directory where the parts are located using the `cd` command.
      3. Use the following command to combine the parts:
+
+
         ```powershell
         Get-Content -Path "cookies_stealer_240918-1937.zip.part1", "cookies_stealer_240918-1937.zip.part2" -Raw | Set-Content -Path "cookies_stealer_240918-1937.zip"
         ```
+
+
         The `Get-Content` cmdlet reads the contents of the specified files, and `Set-Content` writes the combined content to `cookies_stealer_240918-1937.zip`.
 
 
