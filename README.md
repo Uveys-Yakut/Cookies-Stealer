@@ -26,9 +26,13 @@ To run your project on your local machine, follow these steps:
 ### 🚀 Steps
 
 1. **Clone this repository**: Open a terminal and run:
+
+
    ```bash
    git clone https://github.com/Uveys-Yakut/cookies-stealer.git
 2. **Create a `.env` File**:
+
+
     ```bash
     EMAIL_HOST=smtp.gmail.com
     EMAIL_PORT=587
@@ -36,9 +40,13 @@ To run your project on your local machine, follow these steps:
     EMAIL_PASSWORD=your-email-password
     EMAIL_TO=recipient-email@example.com
 3. **Navigate to the Project Directory**: Install the required Python packages: 
+   
+   
    ```bash
    pip install -r requirements.txt
 4. **Start the Application**: Run the application using:
+   
+   
    ```bash
    python main.py
 
